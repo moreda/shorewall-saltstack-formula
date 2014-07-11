@@ -8,8 +8,7 @@ shorewall:
     - version: {{ shorewall.version }}
     {% endif %}
   service:
-    - running
+    - enabled
     - name: {{ shorewall.service }}
-    - enable: True
     - require:
       - pkg: shorewall

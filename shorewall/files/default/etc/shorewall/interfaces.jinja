@@ -2,4 +2,4 @@
 
 # For information about entries in this file, type "man shorewall-interfaces"
 ?FORMAT 2
-inet    eth0
+inet    {{ salt['pillar.get']('shorewall:inet_interface', 'eth0') }}
